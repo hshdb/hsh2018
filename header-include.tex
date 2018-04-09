@@ -1,0 +1,13 @@
+\newcommand{\cornerimage}[2][]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[xshift=-0mm,yshift=-10mm,anchor=north east]
+	  at (current page.north east)
+	  {\includegraphics[#1]{#2}};
+  \end{tikzpicture}
+}
+
+\captionsetup[figure]{labelformat=empty}
+\setbeamertemplate{caption}{\insertcaption}
+
+\setbeamertemplate{footline}{}
+\setbeamercolor{frametitle}{fg=black!90,bg=orange!10}
